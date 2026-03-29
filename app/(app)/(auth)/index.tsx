@@ -1,0 +1,17 @@
+import useUserStore from "@/hooks/use-userstore";
+import React from "react";
+import { Button, StyleSheet, Text, View } from "react-native";
+
+const Page = () => {
+  const { setIsGuest } = useUserStore();
+  return (
+    <View>
+      <Text>My Inside page</Text>
+      <Button title="go to login" onPress={() => setIsGuest(false)} />
+    </View>
+  );
+};
+
+export default Page;
+
+const styles = StyleSheet.create({});
